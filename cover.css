@@ -1,0 +1,60 @@
+/*
+ * Globals
+ */
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
+}
+body {
+}
+.header-container {
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+  background-color: #333;
+  padding-bottom: 20px;
+}
+
+.jumbotron {
+  color: #000;
+  text-shadow: none;
+}
+
+.jumbotron a,
+.jumbotron a:focus,
+.jumbotron a:hover { 
+  color: #22B;
+  text-decoration: underline;
+}
+
+
+
+.mastfoot {
+  color: #999; 
+}
+
+
+/*
+ * Affix and center
+ */
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 992px) {
+
+}\
