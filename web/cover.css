@@ -2,14 +2,15 @@
  * Globals
  */
 
-/* Links */
-a,
-a:focus,
-a:hover {
-  color: #fff;
+
+h1,h2,h3,h4,h5,h6 {
+  font-weight: normal;
+  font-weight: 200;
 }
 
-
+.subtitle {
+  color: #888;
+}
 
 /*
  * Base structure
@@ -18,14 +19,25 @@ a:hover {
 html,
 body {
   height: 100%;
-}
-body {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #333;
 }
 .header-container {
   color: #fff;
   text-shadow: 0 1px 3px rgba(0,0,0,.5);
   background-color: #333;
   padding-bottom: 20px;
+}
+
+
+.header-container-wrapper{
+  min-height: 100%;
+height: auto !important;
+}
+.header-container-wrapper .container {
+  padding-bottom: 80px;
 }
 
 .jumbotron {
@@ -40,9 +52,44 @@ body {
   text-decoration: underline;
 }
 
+.join-holder {
+  background: #fff;
+  padding: 5px 0;
+  margin-top: 30px;
+}
 
+.join-holder .btn.btn-default{
+  background: #f76f0f;
+  color: white;
+  font-weight: 200;
+  box-shadow: none;
+  border: none;
+}
+
+.wizard {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.wizard .step {
+  padding: 5px;
+  background: #999;
+  text-align: center;
+  color: white;
+  font-weight: 200;
+}
+.wizard .step.active {
+  padding: 5px;
+  background: #f76f0f;
+  text-align: center;
+  color: white;
+}
 
 .mastfoot {
+  margin-top: -80px;
+  padding-top: 20px;
+  text-align: center;
   color: #999; 
 }
 

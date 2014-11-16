@@ -1,0 +1,53 @@
+{% set step = '2' %}
+{% extends 'reg_tutee/_skeleton.html' %}
+
+{% if fields is not defined %}
+  {% set fields = 1..3 %}
+{% endif %}
+
+{% block step_content %} 
+
+  <div class="text-center">
+    <p>Thanks for your interest, {{username}} (<a href="/logout">Not you?</a>)</p>
+    <p class="subtitle">{% block subtext %}Please select up to three courses where you require help{% endblock %}</p><br />
+  </div>
+  
+  <form class="form-horizontal" method="POST" role="form">
+  {% for i in fields %}
+    <div class="row" style="margin-bottom: 10px;">
+      <div class="col-sm-9">
+        <select name="course[{{i}}]" class="form-control">
+          <option value="">Please Select...</option>
+          <option value="EE1-01">EE1-01 Analysis of Circuits</option>
+          <option value="EE1-02">EE1-02 Digital Electronics 1</option>
+          <option value="EE1-03">EE1-03 Semiconductor Devices</option>
+          <option value="EE1-04">EE1-04 Analogue Electronics 1</option>
+          <option value="EE1-05">EE1-05 Energy Conversion</option>
+          <option value="EE1-06">EE1-06 Introduction to Signals and Communications</option>
+          <option value="EE1-07">EE1-07 Software Engineering 1: Introduction to Computing</option>
+          <option value="EE1-10">EE1-10A/B Mathematics 1 (E-stream and I-stream)</option>
+          <!-- <option value="EE1-13">EE1-13 Professional Engineering</option> -->
+          <option value="EE1-LABE">EE1-LABE Electronics Lab</option>
+          <option value="EE1-LABC">EE1-LABC Computing Lab</option>
+          <!-- <option value="EE1-PRJ">EE1-PRJ E1 Project</option> -->
+        </select>
+      </div>
+      <div class="col-sm-3">
+        <select name="courselevel[{{i}}]" class="form-control">
+          <option value='3'>I'm good at this</option>
+          <option value='2'>I'm better at this</option>
+          <option value='1'>I'm great at this</option>
+        </select>
+      </div>
+    </div>
+  {% endfor %}
+    <div class="form-group">
+      <div class="col-xs-offset-8 col-xs-4 text-right">
+        <button type="submit" class="btn btn-default btn-block">Complete</button>
+      </div>
+    </div>
+  </form>
+
+
+{% endblock %}
+

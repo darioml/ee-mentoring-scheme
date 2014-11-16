@@ -1,98 +1,39 @@
+{% extends '_skeleton.html' %}
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
-
-    <title>EEE Tutoring Scheme</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="cover.css" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-
-  <body>
-
-    <div class="header-container">
-      <div class="masthead clearfix">
-        <div class="inner text-center">
-          <h1><small>Department of Electrical and Electronic Engineering</small><br />
-          Tutoring Scheme</h1>
-          <p></p>
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
+{% block pre_row %}
+  <div class="row"><div class="jumbotron col-md-12 text-center" style="margin-top: 10px; margin-bottom: 10px">
+    <h3>Thanks for your interest in the EEE Tutoring Scheme</h3>
+    <p><small>We welcome all students in the Department of Electrical and Electronic Engineering to join; either as a Tutee or a Tutor. The scheme is currently oriented around first year courses, but please <a href="mailto:dm1911@ic.ac.uk;jack.heaffey11@imperial.ac.uk;samuel.kong11@imperial.ac.uk">email us</a> if you would want us to expand this to furhter year groups!</small></p>
+  </div></div>
+{% endblock %}
 
 
 
-          
-
-          <div class="row"><div class="jumbotron col-md-12 text-center" style="margin-top: 10px; margin-bottom: 10px">
-            <h3>Thanks for your interest in the EEE Tutoring Scheme</h3>
-            <p><small>We welcome all students in the Department of Electrical and Electronic Engineering to join; either as a Tutee or a Tutor. The scheme is currently oriented around first year courses, but please <a href="mailto:dm1911@ic.ac.uk;jack.heaffey11@imperial.ac.uk;samuel.kong11@imperial.ac.uk">email us</a> if you would want us to expand this to furhter year groups!</small></p>
-          </div></div>
-
-          <div class="row">
-            <div class="col-sm-6">
-              <h3>Become a Mentee</h3>
-              <p class="lead">Learn more, do better, go further</p>
-              <p>Join the scheme as a mentee, and join classes run by students. Specific classes for each course are run in conjunction with study groups and lectures.</p>
-              <p>As a mentee, you will get</p>
-              <ul>
-                <li>Lecture specific mentor classes</li>
-                <li>Socialise across the years</li>
-                <li>A different perspective on teaching materials</li>
-              </ul>
-              <p>Convinced? Sign up for free!</p>
-              <a href="#" class="btn btn-lg btn-default">Become a Tutee</a>
-            </div>
-            <div class="col-sm-6">
-              <h3>Become a Mentor</h3>
-              <p class="lead">Teach, Inspire, Grow</p>
-              <p>As a mentor, you will be teaching the next generation of Imperial engineers. Combine your knowledge and epxerience to help our department.</p>
-              <p>As a mentor, you will get</p>
-              <ul>
-                <li>A fresh, new look on past materials</li>
-                <li>Accredation through our department, the Union and IC</li>
-                <li>So much personal satisfaction!</li>
-              </ul>
-              <p>Help out - sign up!</p>
-              <a href="#" class="btn btn-lg btn-default">Become a Mentor</a>
-            </div>
-          </div>
-
-          <div class="mastfoot">
-            <div class="inner">
-              <p>Run by your Departmental Representatives - Jack, Dario and Sam.<br />
-              <small>&copy;2014 darioml</small></p>
-            </div>
-          </div>
-
-
-
-    </div>
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="ie10-viewport-bug-workaround.js"></script>
-  </body>
-</html>
+{% block content %}
+  <div class="col-sm-6">
+    <h3>Become a Mentee</h3>
+    <p class="lead">Learn more, do better, go further</p>
+    <p>Join the scheme as a mentee, and join classes run by students. Specific classes for each course are run in conjunction with study groups and lectures.</p>
+    <p>As a mentee, you will get</p>
+    <ul>
+      <li>Lecture specific classes led by students</li>
+      <li>Socialise across the years</li>
+      <li>A different perspective on teaching materials</li>
+    </ul>
+    <p>Convinced? Sign up for free!</p>
+    <a href="join/tutee" class="btn btn-lg btn-default">Become a Tutee</a>
+  </div>
+  <div class="col-sm-6">
+    <h3>Become a Tutor</h3>
+    <p class="lead">Teach, Inspire, Grow</p>
+    <p>As a tutor, you will be teaching the next generation of Imperial engineers. Combine your knowledge and epxerience to help our department.</p>
+    <p>As a tutor, you will get</p>
+    <ul>
+      <li>A fresh, new look on past materials</li>
+      <li>Accredation through our department, the Union and IC</li>
+      <li>So much personal satisfaction!</li>
+    </ul>
+    <p>Help out - sign up!</p>
+    <a href="join/tutor" class="btn btn-lg btn-default">Become a Tutor</a>
+  </div>
+{% endblock %}

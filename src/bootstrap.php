@@ -19,6 +19,6 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
 ));
 
 
-//$app->register(new ICFS\DoctrineConnection());
+$app->register(new EEMS\DoctrineConnection());
 
 return $app;

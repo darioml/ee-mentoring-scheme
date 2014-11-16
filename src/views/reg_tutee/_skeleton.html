@@ -1,0 +1,26 @@
+{% extends '_skeleton.html' %}
+
+
+{% block content %} 
+
+<div class="join-holder col-md-12">
+  <div class="text-center">
+    <h3>{% block title %}Become a <strong>Tutee</strong>{% endblock %}</h3>
+    <p class="subtitle">{% block subtitle %}Help us understand what help you need.{% endblock %}</p>
+    <br />
+  </div>
+
+
+<div class="row wizard">
+  <div class="step {% if step == 1 %}active {% endif %}col-xs-4">Login</div>
+  <div class="step {% if step == 2 %}active {% endif %}col-xs-4">Course Selection</div>
+  <div class="step {% if step == 3 %}active {% endif %}col-xs-4">Done!</div>
+</div>
+
+  {% block step_content %}{% endblock %}
+
+
+</div>
+
+{% endblock %}
+
