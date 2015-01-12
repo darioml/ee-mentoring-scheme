@@ -14,12 +14,16 @@ $app->get('/', function (Application $app) {
 
 
 
+$app->get('/logout', function (Application $app) {
+    $app['session']->clear();
+    return $app->redirect('/');
+});
 
 
 
 
 
-$app->get('/join/tutee', function (Application $app) {
+$app->get('/join/tutee/', function (Application $app) {
     return $app->redirect('/join/tutee/1');
 });
 
@@ -35,7 +39,9 @@ $app->post('/join/tutee/1', function (Application $app) {
     }
 
     if (function_exists('/pam_auth')) {
-        $error = "exists";
+        if (!pam_auth($app['request']->get('uname'), $app['request']->get('passw'))) {
+            $error = "Invalid Username / Password";
+        }
     } else if (strlen($app['request']->get('uname')) < 1) {
         $error = "Invalid Username / Password";
     }
@@ -113,7 +119,7 @@ $app->get('/join/tutee/3', function (Application $app) {
 
 
 
-$app->get('/join/tutor', function (Application $app) {
+$app->get('/join/tutor/', function (Application $app) {
     return $app->redirect('/join/tutor/1');
 });
 $app->get('/join/tutor/1', function (Application $app) {
